@@ -3,7 +3,7 @@
 //Elin Doughouz >> https://www.facebook.com/Elindoughouz
 //====================================================
 
-//For the accuracy of the icon and logo, please use this website " https://appicon.co " and add images according to size in folders " mipmap " 
+//For the accuracy of the icon and logo, please use this website " https://appicon.co " and add images according to size in folders " mipmap "
 
 using System.Collections.Generic;
 using SocketIOClient.Transport;
@@ -36,22 +36,22 @@ namespace WoWonder
         /// ==============================================
         /// AppMode.Default : (Facebook) Mode
         /// AppMode.LinkedIn : (Jobs) Mode
-        /// 
-        /// AppMode.Instagram >> #Next Version 
+        ///
+        /// AppMode.Instagram >> #Next Version
         /// ==============================================
         /// </summary>
         public static readonly AppMode AppMode = AppMode.Default;
 
         //Main Colors >>
         //*********************************************************
-        public static readonly string MainColor = "#A52729";
-         
+        public static readonly string MainColor = "#235777";
+
         //Language Settings >> http://www.lingoes.net/en/translator/langcode.htm
         //*********************************************************
         public static bool FlowDirectionRightToLeft = false;
         public static string Lang = ""; //Default language ar
 
-        //Set Language User on site from phone 
+        //Set Language User on site from phone
         public static readonly bool SetLangUser = false;
 
         public static readonly Dictionary<string, string> LanguageList = new Dictionary<string, string>()
@@ -78,9 +78,9 @@ namespace WoWonder
         //*********************************************************
         public static readonly bool MessengerIntegration = true;
         public static readonly bool ShowDialogAskOpenMessenger = false;
-        public static readonly string MessengerPackageName = "com.wowonderandroid.messenger"; //APK name on Google Play
+        public static readonly string MessengerPackageName = "com.zuitch.app"; //APK name on Google Play
 
-        //AdMob >> Please add the code ad in the Here and analytic.xml 
+        //AdMob >> Please add the code ad in the Here and analytic.xml
         //*********************************************************
         public static readonly ShowAds ShowAds = ShowAds.AllUsers;
 
@@ -108,7 +108,7 @@ namespace WoWonder
         public static readonly string AdAdMobAppOpenKey = "ca-app-pub-5135691635931982/2813560515";
         public static readonly string AdRewardedInterstitialKey = "ca-app-pub-5135691635931982/7842669101";
 
-        //FaceBook Ads >> Please add the code ad in the Here and analytic.xml 
+        //FaceBook Ads >> Please add the code ad in the Here and analytic.xml
         //*********************************************************
         public static readonly bool ShowFbBannerAds = false;
         public static readonly bool ShowFbInterstitialAds = false;
@@ -121,8 +121,8 @@ namespace WoWonder
         public static readonly string AdsFbRewardVideoKey = "250485588986218_554072818627492";
         public static readonly string AdsFbNativeKey = "250485588986218_554706301897477";
 
-        //Ads AppLovin >> Please add the code ad in the Here 
-        //*********************************************************  
+        //Ads AppLovin >> Please add the code ad in the Here
+        //*********************************************************
         public static readonly bool ShowAppLovinBannerAds = false;
         public static readonly bool ShowAppLovinInterstitialAds = false;
         public static readonly bool ShowAppLovinRewardAds = false;
@@ -130,7 +130,7 @@ namespace WoWonder
         public static readonly string AdsAppLovinBannerId = "93a37dd25bd3f699";
         public static readonly string AdsAppLovinInterstitialId = "5fec6909ce79fb49";
         public static readonly string AdsAppLovinRewardedId = "3fdddf11aca6ce57";
-        //********************************************************* 
+        //*********************************************************
 
         public static readonly bool EnableRegisterSystem = true;
 
@@ -138,7 +138,7 @@ namespace WoWonder
 
         /// <summary>
         /// true => Only over 18 years old
-        /// false => all 
+        /// false => all
         /// </summary>
         public static readonly bool IsUserYearsOld = true;
         public static readonly bool AddAllInfoPorfileAfterRegister = true;
@@ -153,18 +153,18 @@ namespace WoWonder
         public static readonly string CodeTimeZone = "UTC";
 
         //Social Logins >>
-        //If you want login with facebook or google you should change id key in the analytic.xml file 
-        //Facebook >> ../values/analytic.xml .. line 10-11 
-        //Google >> ../values/analytic.xml .. line 15 
+        //If you want login with facebook or google you should change id key in the analytic.xml file
+        //Facebook >> ../values/analytic.xml .. line 10-11
+        //Google >> ../values/analytic.xml .. line 15
         //*********************************************************
         public static readonly bool EnableSmartLockForPasswords = false;
 
         public static readonly bool ShowFacebookLogin = true;
         public static readonly bool ShowGoogleLogin = true;
 
-        public static readonly string ClientId = "657181382689-ubjs94kivnge4isi0im9s1iq382ujsvq.apps.googleusercontent.com";
+        public static readonly string ClientId = "486221582328-9f88tnv658a6uflhijlhsp6bu2aecb1g.apps.googleusercontent.com";
 
-        //########################### 
+        //###########################
 
         //Main Slider settings
         //*********************************************************
@@ -172,7 +172,7 @@ namespace WoWonder
         public static readonly ToastTheme ToastTheme = ToastTheme.Default;
 
         /// <summary>
-        /// None : To disable Reels video on the app 
+        /// None : To disable Reels video on the app
         /// </summary>
         public static readonly ReelsPosition ReelsPosition = ReelsPosition.Tab;
         public static readonly bool ShowYouTubeReels = true;
@@ -229,17 +229,17 @@ namespace WoWonder
 
         /// <summary>
         /// https://rapidapi.com/api-sports/api/covid-193
-        /// you can get api key and host from here https://prnt.sc/wngxfc 
+        /// you can get api key and host from here https://prnt.sc/wngxfc
         /// </summary>
         public static readonly bool ShowInfoCoronaVirus = false;
         public static readonly string KeyCoronaVirus = "164300ef98msh0911b69bed3814bp131c76jsneaca9364e61f";
         public static readonly string HostCoronaVirus = "covid-193.p.rapidapi.com";
-         
+
         public static readonly bool ShowLive = true;
         public static readonly string AppIdAgoraLive = "7f1cb06a3b4d4e84965ea6d3b3e16a8a";
-         
+
         //Events settings
-        //*********************************************************  
+        //*********************************************************
         public static bool ShowEvents = true;
         public static readonly bool ShowEventGoing = true;
         public static readonly bool ShowEventInvited = true;
@@ -270,7 +270,7 @@ namespace WoWonder
 
         /// <summary>
         ///  Currency
-        /// CurrencyStatic = true : get currency from app not api 
+        /// CurrencyStatic = true : get currency from app not api
         /// CurrencyStatic = false : get currency from api (default)
         /// </summary>
         public static readonly bool CurrencyStatic = false;
@@ -301,7 +301,7 @@ namespace WoWonder
         public static readonly string LifetimePrice = "259";
 
         //Native Post settings
-        //********************************************************* 
+        //*********************************************************
         public static readonly bool ShowTextWithSpace = true;
 
         public static readonly bool ShowTextShareButton = false;
@@ -333,7 +333,7 @@ namespace WoWonder
 
         /// <summary>
         /// Post Privacy
-        /// ShowPostPrivacyForAllUser = true : all posts user have icon Privacy 
+        /// ShowPostPrivacyForAllUser = true : all posts user have icon Privacy
         /// ShowPostPrivacyForAllUser = false : just my posts have icon Privacy (default)
         /// </summary>
         public static readonly bool ShowPostPrivacyForAllUser = false;
@@ -348,7 +348,7 @@ namespace WoWonder
         public static readonly VolumeState TextSizeDescriptionPost = VolumeState.On;
 
         //Trending page
-        //*********************************************************   
+        //*********************************************************
         public static readonly bool ShowTrendingPage = true;
 
         public static readonly bool ShowProUsersMembers = true;
@@ -377,10 +377,10 @@ namespace WoWonder
         public static readonly string ExCurrencies = "EUR,GBP,TRY";
         public static readonly List<string> ExCurrenciesIcons = new List<string> { "€", "£", "₺" };
 
-        //********************************************************* 
+        //*********************************************************
 
         /// <summary>
-        /// you can edit video using FFMPEG 
+        /// you can edit video using FFMPEG
         /// </summary>
         public static readonly bool EnableVideoEditor = true;
 
@@ -409,7 +409,7 @@ namespace WoWonder
 
         public static readonly bool ShowAnonymousPrivacyPost = true;
 
-        //Advertising 
+        //Advertising
         public static readonly bool ShowAdvertisingPost = true;
 
         //Settings Page >> General Account
@@ -477,7 +477,7 @@ namespace WoWonder
         public static TabTheme SetTabDarkTheme = TabTheme.Light;
         public static readonly MoreTheme MoreTheme = MoreTheme.Grid;
 
-        //Bypass Web Errors  
+        //Bypass Web Errors
         //*********************************************************
         public static readonly bool TurnTrustFailureOnWebException = true;
         public static readonly bool TurnSecurityProtocolType3072On = true;
@@ -492,7 +492,7 @@ namespace WoWonder
 
         /// <summary>
         /// Paypal and google pay using Braintree Gateway https://www.braintreepayments.com/
-        /// 
+        ///
         /// Add info keys in Payment Methods : https://prnt.sc/1z5bffc - https://prnt.sc/1z5b0yj
         /// To find your merchant ID :  https://prnt.sc/1z59dy8
         ///
@@ -515,7 +515,7 @@ namespace WoWonder
 
         /// <summary>
         /// If you want RazorPay you should change id key in the analytic.xml file
-        /// razorpay_api_Key >> .. line 28 
+        /// razorpay_api_Key >> .. line 28
         /// </summary>
         public static readonly bool ShowRazorPay = true;
         /// <summary>
@@ -537,11 +537,11 @@ namespace WoWonder
         public static readonly string FlutterWaveCurrency = "NGN";
         public static readonly string FlutterWavePublicKey = "FLWPUBK_TEST-9c877b3110438191127e631c8*****";
         public static readonly string FlutterWaveEncryptionKey = "FLWSECK_TEST298f1****";
-        //********************************************************* 
+        //*********************************************************
 
-        //########################################### 
+        //###########################################
         //Chat
-        //*********************************************************  
+        //*********************************************************
         public static readonly InitializeWoWonder.ConnectionType ConnectionTypeChat = InitializeWoWonder.ConnectionType.Socket;
         public static readonly string PortSocketServer = "449";
         public static readonly TransportProtocol Transport = TransportProtocol.Polling;
@@ -552,7 +552,7 @@ namespace WoWonder
         //Just replace it with this 5 lines of code
         /*
          <uses-permission android:name="android.permission.READ_CONTACTS" />
-         <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" /> 
+         <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
          */
         public static readonly bool ShowButtonContact = true;
         /////////////////////////////////////
@@ -574,7 +574,7 @@ namespace WoWonder
 
         public static readonly bool ShowQrCodeSystem = true;
 
-        //Record Sound Style & Text 
+        //Record Sound Style & Text
         public static readonly bool ShowButtonRecordSound = true;
 
         // Options List Message
@@ -591,7 +591,7 @@ namespace WoWonder
 
         //List Chat >>
         //*********************************************************
-        public static readonly bool EnableChatPage = false; //>> Next update 
+        public static readonly bool EnableChatPage = false; //>> Next update
         public static readonly bool EnableChatGroup = true;
         public static readonly bool EnableBroadcast = true;
 
@@ -610,10 +610,10 @@ namespace WoWonder
         /// - You can get api key from here https://prnt.sc/b4MBmwlx-6Bx
         /// - You can download the files of filters from here: https://mega.nz/file/r7ZzzJBC#XTtZDBwnDIrHvrbeDglYCot3yrcGsfkszd2mq0yDY3Q
         /// - Or you can find more filters here: https://developer.deepar.ai/downloads
-        /// </summary> 
+        /// </summary>
         public static readonly bool EnableDeepAr  = true; //New
         public static readonly string DeepArKey = "e04529938c873ebfec901d15509f088464330b3bc31d8e5b5ad22e8bde53dffb22a147d2c00d7e65"; //#New
-         
+
         // Video/Audio Call Settings >>
         //*********************************************************
         public static readonly EnableCall EnableCall = EnableCall.AudioAndVideo;
@@ -630,7 +630,7 @@ namespace WoWonder
         //Settings Page >> General Account
         public static readonly bool ShowSettingsWallpaper = true;
 
-        //Options chat heads (Bubbles) 
+        //Options chat heads (Bubbles)
         //*********************************************************
         public static readonly bool ShowChatHeads = true;
         public static readonly bool ShowSettingsFingerprintLock = true;

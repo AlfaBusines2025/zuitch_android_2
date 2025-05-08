@@ -39,7 +39,7 @@ using Exception = System.Exception;
 using GetCredentialRequest = AndroidX.Credentials.GetCredentialRequest;
 using GetCredentialResponse = AndroidX.Credentials.GetCredentialResponse;
 using Object = Java.Lang.Object;
-using Task = System.Threading.Tasks.Task; 
+using Task = System.Threading.Tasks.Task;
 
 namespace WoWonder.Activities.Default
 {
@@ -69,7 +69,7 @@ namespace WoWonder.Activities.Default
 
                 InitializeWoWonder.Initialize(AppSettings.TripleDesAppServiceProvider, PackageName, AppSettings.TurnTrustFailureOnWebException, MyReportModeApp.CreateInstance());
 
-                //Set Full screen 
+                //Set Full screen
                 SetTheme(WoWonderTools.IsTabDark() ? Resource.Style.MyTheme_Dark : Resource.Style.MyTheme);
                 Window?.SetSoftInputMode(SoftInput.AdjustResize);
 
@@ -485,7 +485,7 @@ namespace WoWonder.Activities.Default
                 {
                     FbAccessToken = accessToken.Token;
 
-                    //Login Api 
+                    //Login Api
                     var (apiStatus, respond) = await RequestsAsync.Auth.SocialLoginAsync(FbAccessToken, "facebook", UserDetails.DeviceId, UserDetails.DeviceMsgId);
                     if (apiStatus == 200)
                     {
@@ -547,7 +547,7 @@ namespace WoWonder.Activities.Default
                 GetGoogleIdOption googleIdOption = new GetGoogleIdOption.Builder()
                     .SetFilterByAuthorizedAccounts(false)
                     .SetServerClientId(AppSettings.ClientId)
-                    //.SetAutoSelectEnabled(false) 
+                    //.SetAutoSelectEnabled(false)
                     .Build();
 
                 GetCredentialRequest request = new GetCredentialRequest.Builder()
@@ -618,7 +618,7 @@ namespace WoWonder.Activities.Default
         public void OnError(Object result)
         {
             try
-            { 
+            {
                 ToastUtils.ShowToast(this, result?.ToString(), ToastLength.Short);
             }
             catch (Exception exception)

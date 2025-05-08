@@ -5,13 +5,13 @@
 		<OutputType>Exe</OutputType>
 		<Nullable>disable</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
-		<ApplicationId>com.wowonder.combined</ApplicationId>
+		<ApplicationId>com.zuitch.app</ApplicationId>
 		<ApplicationVersion>1</ApplicationVersion>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<Copyright>Copyright © 2025</Copyright>
 		<AndroidSigningKeyStore>KeyApk\wowondertimelinechat.keystore</AndroidSigningKeyStore>
 		<Title>WoWonder</Title>
-	</PropertyGroup> 
+	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<JavaMaximumHeapSize>4G</JavaMaximumHeapSize>
 		<AndroidKeyStore>True</AndroidKeyStore>

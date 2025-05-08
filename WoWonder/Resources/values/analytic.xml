@@ -2,7 +2,7 @@
 <resources>
 
 	<!--add your website without http >> demo.wowonder.com-->
-	<string name="ApplicationUrlWeb">demo.wowonder.com</string>
+	<string name="ApplicationUrlWeb">zuitch.com</string>
 
 	<!-- #warning about new privacy on google AdMob...
 	should add file app-ads.txt in the server >>this content file text https://prnt.sc/vm086w
@@ -25,10 +25,10 @@
 	<!--===============================================================-->
 
 	<!--google ID >> Google Login - Map - YouTube Player  https://prnt.sc/vysrsw -->
-	<string name="google_key">AIzaSyBujLFo5UPoa2_gM4OCUDPS3TpaDhpUb7M</string> 
+	<string name="google_key">AIzaSyDvfYHRuFEeGvRU3iFLj6nBMqPlE1jc1Q4</string>
 
 	<!-- https://developers.google.com/maps/documentation/maps-static/intro -->
-	<string name="google_maps_key">AIzaSyBujLFo5UPoa2_gM4OCUDPS3TpaDhpUb7M</string>
+	<string name="google_maps_key">AIzaSyDpljsoctrc2mMY2xc_ScGvESyHOkY35TU</string>
 
 	<string name="razorpay_api_Key">rzp_test_ruzI7R7AkonOIi</string>
 
