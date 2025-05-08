@@ -159,7 +159,7 @@ namespace WoWonder
         //*********************************************************
         public static readonly bool EnableSmartLockForPasswords = false;
 
-        public static readonly bool ShowFacebookLogin = true;
+        public static readonly bool ShowFacebookLogin = false;
         public static readonly bool ShowGoogleLogin = true;
 
         public static readonly string ClientId = "486221582328-9f88tnv658a6uflhijlhsp6bu2aecb1g.apps.googleusercontent.com";
@@ -542,9 +542,14 @@ namespace WoWonder
         //###########################################
         //Chat
         //*********************************************************
-        public static readonly InitializeWoWonder.ConnectionType ConnectionTypeChat = InitializeWoWonder.ConnectionType.Socket;
-        public static readonly string PortSocketServer = "449";
-        public static readonly TransportProtocol Transport = TransportProtocol.Polling;
+        // Usar Socket.IO
+        public static readonly InitializeWoWonder.ConnectionType ConnectionTypeChat = InitializeWoWonder.ConnectionType.RestApi;
+
+        // Puerto donde tu servidor Socket.IO está escuchando
+        public static readonly string PortSocketServer = "3000";
+        // Usar WebSocket en lugar de Polling para una conexión más estable
+        public static readonly TransportProtocol Transport = TransportProtocol.WebSocket;
+
 
         //Chat Window Activity >>
         //*********************************************************
