@@ -1,0 +1,21 @@
+
+
+- GENERAL SETTINGS
+
+- OneSignal Notifications
+
+
+app_id=551ec45a-8869-44e7-a3db-d39412c9d302
+
+key_id=os_v2_app_kupmiwuinfcopi632okbfsotak4x25qckwyenrmqclqax5nbyhx7fjuylnalras5zigsblqxrpfe3pufxw265gossxj73lg6gzi54ia
+
+
+google_maps_key=AIzaSyAM23c3ksFkOLnc5Adw4ne_LQSmZve5cdg
+
+
+SHA-1: 21:3D:8C:F1:60:0C:97:24:79:17:07:B6:60:B6:18:B8:26:66:BE:58
+
+
+
+
+

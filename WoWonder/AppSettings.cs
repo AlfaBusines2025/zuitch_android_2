@@ -67,7 +67,7 @@ namespace WoWonder
         //Notification Settings >>
         //*********************************************************
         public static bool ShowNotification = true;
-        public static string OneSignalAppId = "64974c58-9993-40ed-b782-0814edc401ea";
+        public static string OneSignalAppId = "551ec45a-8869-44e7-a3db-d39412c9d302";
         public static string MsgOneSignalAppId = "64974c58-9993-40ed-b782-0814edc401ea";
 
         // WalkThrough Settings >>
@@ -77,7 +77,7 @@ namespace WoWonder
         //Main Messenger settings
         //*********************************************************
         public static readonly bool MessengerIntegration = true;
-        public static readonly bool ShowDialogAskOpenMessenger = false;
+        public static readonly bool ShowDialogAskOpenMessenger = true;
         public static readonly string MessengerPackageName = "com.zuitch.app"; //APK name on Google Play
 
         //AdMob >> Please add the code ad in the Here and analytic.xml
@@ -236,7 +236,7 @@ namespace WoWonder
         public static readonly string HostCoronaVirus = "covid-193.p.rapidapi.com";
 
         public static readonly bool ShowLive = true;
-        public static readonly string AppIdAgoraLive = "7f1cb06a3b4d4e84965ea6d3b3e16a8a";
+        public static readonly string AppIdAgoraLive = "7c1561d933bb4f76a672a98e194fa4dc";
 
         //Events settings
         //*********************************************************
