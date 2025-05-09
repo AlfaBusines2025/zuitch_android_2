@@ -40,6 +40,12 @@ using GetCredentialRequest = AndroidX.Credentials.GetCredentialRequest;
 using GetCredentialResponse = AndroidX.Credentials.GetCredentialResponse;
 using Object = Java.Lang.Object;
 using Task = System.Threading.Tasks.Task;
+using Android.Gms.Auth.Api;
+using Android.Gms.Auth.Api.SignIn;
+using Android.Gms.Common.Apis;
+using Android.Runtime;
+
+
 
 namespace WoWonder.Activities.Default
 {
@@ -53,6 +59,8 @@ namespace WoWonder.Activities.Default
         public LinearLayout GoogleSignInButton;
         public static ICredentialManager CredentialManager;
         public static SocialLoginBaseActivity Instance;
+        private const int RC_SIGN_IN = 1001;
+        private GoogleSignInClient _googleClient;
 
         private string TimeZone = "";
         private bool IsActiveUser = true;
@@ -229,8 +237,23 @@ namespace WoWonder.Activities.Default
                 //#Google
                 if (AppSettings.ShowGoogleLogin)
                 {
+                    // 1) Configura opciones de Google Sign-In
+                    var gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn)
+                        .RequestIdToken(AppSettings.ClientId)
+                        .RequestEmail()
+                        .Build();
+
+                    // 2) Crea el cliente
+                    _googleClient = GoogleSignIn.GetClient(this, gso);
+
+                    // 3) Asocia el botón y lanza el selector
                     GoogleSignInButton = FindViewById<LinearLayout>(Resource.Id.bntLoginGoogle);
-                    GoogleSignInButton.Click += GoogleSignInButtonOnClick;
+                    GoogleSignInButton.Visibility = ViewStates.Visible;
+                    GoogleSignInButton.Click += (sender, args) =>
+                    {
+                        var signInIntent = _googleClient.SignInIntent;
+                        StartActivityForResult(signInIntent, RC_SIGN_IN);
+                    };
                 }
                 else
                 {
@@ -676,19 +699,40 @@ namespace WoWonder.Activities.Default
         #region Result & Permissions
 
         //Result
-        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
-        {
-            try
-            {
-                // Logins Facebook
-                MFbCallManager?.OnActivityResult(requestCode, (int)resultCode, data);
-                base.OnActivityResult(requestCode, resultCode, data);
-            }
-            catch (Exception e)
-            {
-                Methods.DisplayReportResultTrack(e);
-            }
-        }
+        protected override void OnActivityResult(int requestCode,[GeneratedEnum] Result resultCode,Intent data)
+          {
+              try
+              {
+                  // 1) Facebook callback
+                  MFbCallManager?.OnActivityResult(requestCode, (int)resultCode, data);
+
+                  // 2) Google Sign-In
+                  if (requestCode == RC_SIGN_IN)
+                  {
+                      var task = GoogleSignIn.GetSignedInAccountFromIntent(data);
+                      try
+                      {
+                          var account = task
+                              .GetResult(Java.Lang.Class.FromType(typeof(GoogleSignInAccount)))
+                              as GoogleSignInAccount;
+                          var idToken = account?.IdToken;
+                          SetContentGoogle(idToken);
+                      }
+                      catch (ApiException ex)
+                      {
+                          Methods.DisplayReportResultTrack(ex);
+                      }
+                  }
+
+                  base.OnActivityResult(requestCode, resultCode, data);
+              }
+              catch (Exception e)
+              {
+                  Methods.DisplayReportResultTrack(e);
+              }
+          }
+
+
 
         //Permissions
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)

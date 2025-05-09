@@ -162,7 +162,7 @@ namespace WoWonder
         public static readonly bool ShowFacebookLogin = false;
         public static readonly bool ShowGoogleLogin = true;
 
-        public static readonly string ClientId = "486221582328-9f88tnv658a6uflhijlhsp6bu2aecb1g.apps.googleusercontent.com";
+        public static readonly string ClientId = "486221582328-d3drbcek46j21kn76oo31bp4g8htfet3.apps.googleusercontent.com";
 
         //###########################
 

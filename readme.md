@@ -11,3 +11,9 @@ for /f %i in ('adb -s emulator-5554 shell pidof com.zuitch.app') do set APP_PID=
 adb -s emulator-5554 logcat --pid=%APP_PID% -v threadtime -t 100
 
 adb logcat
+
+ANDRPOID
+486221582328-d3drbcek46j21kn76oo31bp4g8htfet3.apps.googleusercontent.com
+
+WEB
+486221582328-9f88tnv658a6uflhijlhsp6bu2aecb1g.apps.googleusercontent.com

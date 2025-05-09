@@ -9,15 +9,15 @@
 		<ApplicationVersion>1</ApplicationVersion>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<Copyright>Copyright © 2025</Copyright>
-		<AndroidSigningKeyStore>KeyApk\wowondertimelinechat.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyStore>zuitch_release</AndroidSigningKeyStore>
 		<Title>WoWonder</Title>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<JavaMaximumHeapSize>4G</JavaMaximumHeapSize>
 		<AndroidKeyStore>True</AndroidKeyStore>
-		<AndroidSigningKeyAlias>wowondertimelinechat</AndroidSigningKeyAlias>
-		<AndroidSigningStorePass>aaaaaaaa</AndroidSigningStorePass>
-		<AndroidSigningKeyPass>aaaaaaaa</AndroidSigningKeyPass>
+		<AndroidSigningKeyAlias>mateo</AndroidSigningKeyAlias>
+		<AndroidSigningStorePass>123456789</AndroidSigningStorePass>
+		<AndroidSigningKeyPass>123456789</AndroidSigningKeyPass>
 		<!--apk - aab-->
 		<AndroidPackageFormat>apk</AndroidPackageFormat>
 		<NoWarn>1701;1702;CA1416;CA1422;CS0618;SYSLIB0039</NoWarn>
@@ -30,13 +30,15 @@
 		<AndroidStripILAfterAOT>False</AndroidStripILAfterAOT>
 		<AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
 		<EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+		<DebugSymbols>False</DebugSymbols>
+		<AndroidApkSignerAdditionalArguments></AndroidApkSignerAdditionalArguments>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<JavaMaximumHeapSize>4G</JavaMaximumHeapSize>
 		<AndroidKeyStore>True</AndroidKeyStore>
-		<AndroidSigningKeyAlias>wowondertimelinechat</AndroidSigningKeyAlias>
-		<AndroidSigningStorePass>aaaaaaaa</AndroidSigningStorePass>
-		<AndroidSigningKeyPass>aaaaaaaa</AndroidSigningKeyPass>
+		<AndroidSigningKeyAlias>mateo</AndroidSigningKeyAlias>
+		<AndroidSigningStorePass>123456789</AndroidSigningStorePass>
+		<AndroidSigningKeyPass>123456789</AndroidSigningKeyPass>
 		<!--apk - aab-->
 		<AndroidPackageFormat>apk</AndroidPackageFormat>
 		<!--<AndroidPackageFormats>apk;aab</AndroidPackageFormats>-->
@@ -50,6 +52,8 @@
 		<AndroidStripILAfterAOT>True</AndroidStripILAfterAOT>
 		<AndroidEnableProfiledAot>True</AndroidEnableProfiledAot>
 		<EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+		<DebugSymbols>True</DebugSymbols>
+		<AndroidApkSignerAdditionalArguments></AndroidApkSignerAdditionalArguments>
 	</PropertyGroup>
 	<PropertyGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)'))=='android'">
 		<!--link path -->
