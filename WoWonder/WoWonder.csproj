@@ -3,20 +3,20 @@
 		<TargetFramework>net8.0-android</TargetFramework>
 		<SupportedOSPlatformVersion>23</SupportedOSPlatformVersion>
 		<OutputType>Exe</OutputType>
-		<Nullable>disable</Nullable>
+		<Nullable>annotations</Nullable>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<ApplicationId>com.zuitch.app</ApplicationId>
 		<ApplicationVersion>1</ApplicationVersion>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<Copyright>Copyright © 2025</Copyright>
-		<AndroidSigningKeyStore>zuitch_release</AndroidSigningKeyStore>
+		<AndroidSigningKeyStore>zuitch-release.keystore</AndroidSigningKeyStore>
 		<Title>WoWonder</Title>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AndroidUseAapt2>true</AndroidUseAapt2>
 		<JavaMaximumHeapSize>4G</JavaMaximumHeapSize>
-		<AndroidKeyStore>False</AndroidKeyStore>
-		<AndroidSigningKeyAlias>mateo</AndroidSigningKeyAlias>
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyAlias>zuitchAlias</AndroidSigningKeyAlias>
 		<AndroidSigningStorePass>123456789</AndroidSigningStorePass>
 		<AndroidSigningKeyPass>123456789</AndroidSigningKeyPass>
 		<!--apk - aab-->
@@ -36,8 +36,8 @@
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 		<JavaMaximumHeapSize>4G</JavaMaximumHeapSize>
-		<AndroidKeyStore>False</AndroidKeyStore>
-		<AndroidSigningKeyAlias>mateo</AndroidSigningKeyAlias>
+		<AndroidKeyStore>True</AndroidKeyStore>
+		<AndroidSigningKeyAlias>zuitchAlias</AndroidSigningKeyAlias>
 		<AndroidSigningStorePass>123456789</AndroidSigningStorePass>
 		<AndroidSigningKeyPass>123456789</AndroidSigningKeyPass>
 		<!--apk - aab-->

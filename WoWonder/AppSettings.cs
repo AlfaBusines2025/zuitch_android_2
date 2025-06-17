@@ -57,6 +57,7 @@ namespace WoWonder
         public static readonly Dictionary<string, string> LanguageList = new Dictionary<string, string>()
         {
             {"en", "English"},
+            {"es", "Español"},
             {"ar", "Arabic"},
         };
 
